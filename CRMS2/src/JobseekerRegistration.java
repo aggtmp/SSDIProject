@@ -30,7 +30,7 @@ public void doPost(HttpServletRequest req,HttpServletResponse res) throws Servle
 	try
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","newuser1","password");
 		 PreparedStatement ps=con.prepareStatement("insert into jobseekerinformation values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		 PreparedStatement pst=con.prepareStatement("create table "+username+"appliedjobs(referenceid varchar(45))");
 		 pst.executeUpdate();

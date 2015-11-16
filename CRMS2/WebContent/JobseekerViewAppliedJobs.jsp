@@ -1,10 +1,12 @@
 <html>
 <body bgcolor=lightpink>
-<form><center>
-<br>
-<%@ page import="java.sql.*" import ="javax.sql.*" import="java.io.*" %><center>
-<h3>Applied Jobs</h3><br>
-<%
+	<form>
+		<center>
+			<br>
+			<%@ page import="java.sql.*" import="javax.sql.*" import="java.io.*"%><center>
+				<h3>Applied Jobs</h3>
+				<br>
+				<%
 String username=(String)session.getAttribute("username");
 try
 	{
@@ -39,6 +41,8 @@ try
 	}
 
  %>
-</form></center>
+			
+	</form>
+	</center>
 </body>
 </html>

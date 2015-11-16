@@ -1,7 +1,13 @@
 <%@ page import="java.sql.*" import="javax.sql.*"%>
-<html><a href='JobseekerHome.jsp'>HOME</a>&nbsp&nbsp&nbsp<a href=inbox>GO BACK</a><br><body bgcolor=lightcyan>
-<h1>Message</h1><br><br>
-<%
+<html>
+<a href='JobseekerHome.jsp'>HOME</a>&nbsp&nbsp&nbsp
+<a href=inbox>GO BACK</a>
+<br>
+<body bgcolor=lightcyan>
+	<h1>Message</h1>
+	<br>
+	<br>
+	<%
 String timeanddate=(String)session.getAttribute("timeanddate");
 try
 {
@@ -21,5 +27,6 @@ catch(Exception e)
 out.println("Exception has been caught at jobseekerviewmessage.jsp file");
 out.println(e);
 }
- %></body>
+ %>
+</body>
 </html>
