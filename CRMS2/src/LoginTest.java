@@ -56,8 +56,8 @@ public class LoginTest extends Mockito{
         HttpSession session = mock(HttpSession.class);
         RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
         //request.getSession(false);
-        when(request.getParameter("userName")).thenReturn("siva12113@gmail.com");
-        when(request.getParameter("userPassword")).thenReturn("123");
+        when(request.getParameter("userName")).thenReturn("user1");
+        when(request.getParameter("userPassword")).thenReturn("password");
         when(request.getSession()).thenReturn(session);
         when(request.getRequestDispatcher("Login.jsp")).thenReturn(requestDispatcher);
         try {

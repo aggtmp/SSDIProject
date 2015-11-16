@@ -31,7 +31,7 @@ public void doPost(HttpServletRequest req,HttpServletResponse res) throws Servle
 	{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","root","root");
-		 PreparedStatement ps=con.prepareStatement("insert into jobseekerinformation values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		 PreparedStatement ps=con.prepareStatement("insert into jobseekerinformation values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		 PreparedStatement pst=con.prepareStatement("create table "+username+"appliedjobs(referenceid varchar(45))");
 		 pst.executeUpdate();
 		 ps.setString(1,emailaddress);
@@ -39,16 +39,17 @@ public void doPost(HttpServletRequest req,HttpServletResponse res) throws Servle
 		 ps.setString(3,lastname);
 		 ps.setString(4,username);
 		 ps.setString(5,password);
-		 ps.setString(6,totalexperience);
-		 ps.setString(7,jobcategory);
-		 ps.setString(8,keyskills);
-		 ps.setString(9,phonenumber);
-		 ps.setString(10,mobilenumber);
-		 ps.setString(11,currentlocation);
-		 ps.setString(12,prefferedjoblocation);
-		 ps.setString(13,highestqualificationheld);
-		 ps.setString(14,major);
-		 ps.setString(15,institute);
+		 ps.setString(6,rpassword);
+		 ps.setString(7,totalexperience);
+		 ps.setString(8,jobcategory);
+		 ps.setString(9,keyskills);
+		 ps.setString(10,phonenumber);
+		 ps.setString(11,mobilenumber);
+		 ps.setString(12,currentlocation);
+		 ps.setString(13,prefferedjoblocation);
+		 ps.setString(14,highestqualificationheld);
+		 ps.setString(15,major);
+		 ps.setString(16,institute);
 		 int count=ps.executeUpdate();
 		 if(count==1)
 		 {
