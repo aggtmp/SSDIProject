@@ -14,7 +14,7 @@ public void doGet(HttpServletRequest req,HttpServletResponse res) throws Servlet
 	try
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","newuser1","password");
 		PreparedStatement ps=con.prepareStatement("select * from messenger where tousername=?");
 		ps.setString(1,username);
 		ResultSet rs=ps.executeQuery();

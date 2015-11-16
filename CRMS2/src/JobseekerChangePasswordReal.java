@@ -17,7 +17,7 @@ public void doPost(HttpServletRequest req,HttpServletResponse res)throws Servlet
 	try
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","newuser1","password");
 		PreparedStatement ps=con.prepareStatement("update user set password=? where username=?");
 		PreparedStatement pst=con.prepareStatement("update jobseekerinformation set password=? where username=?");
 		pst.setString(1,npassword);

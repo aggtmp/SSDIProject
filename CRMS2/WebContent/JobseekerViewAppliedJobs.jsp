@@ -11,7 +11,7 @@ String username=(String)session.getAttribute("username");
 try
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shanka","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","newuser1","password");
 		PreparedStatement ps=con.prepareStatement("select * from "+username+"appliedjobs");
 		PreparedStatement pst=con.prepareStatement("select * from job where referencenumber=?");
 		ResultSet rs=ps.executeQuery();

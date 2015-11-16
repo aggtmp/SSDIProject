@@ -9,7 +9,7 @@ String username=(String)session.getAttribute("username");
 	try
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shankar","root","root");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/crms","newuser1","password");
 		PreparedStatement ps=con.prepareStatement("select * from jobseekerinformation where username=?");
 		ps.setString(1,username);
 	    ResultSet rs=ps.executeQuery();

@@ -27,14 +27,14 @@ public class LoginTest extends Mockito{
 	}
 
 	@Test
-	public void testDoPostSuccess() {
+	public void doPost() {
 		HttpServletRequest request = mock(HttpServletRequest.class);       
         HttpServletResponse response = mock(HttpServletResponse.class);
         HttpSession session = mock(HttpSession.class);
         RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
         //request.getSession(false);
-        when(request.getParameter("userName")).thenReturn("siva123@gmail.com");
-        when(request.getParameter("userPassword")).thenReturn("123");
+        when(request.getParameter("userName")).thenReturn("geetika");
+        when(request.getParameter("userPassword")).thenReturn("geetika");
         when(request.getSession()).thenReturn(session);
         when(request.getRequestDispatcher("RecruiterHome.jsp")).thenReturn(requestDispatcher);
         try {
@@ -56,8 +56,8 @@ public class LoginTest extends Mockito{
         HttpSession session = mock(HttpSession.class);
         RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
         //request.getSession(false);
-        when(request.getParameter("userName")).thenReturn("user1");
-        when(request.getParameter("userPassword")).thenReturn("password");
+        when(request.getParameter("userName")).thenReturn("geetika");
+        when(request.getParameter("userPassword")).thenReturn("geetika");
         when(request.getSession()).thenReturn(session);
         when(request.getRequestDispatcher("Login.jsp")).thenReturn(requestDispatcher);
         try {
