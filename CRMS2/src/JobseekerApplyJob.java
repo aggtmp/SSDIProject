@@ -11,7 +11,7 @@ public void doPost(HttpServletRequest req,HttpServletResponse res) throws Servle
 	res.setContentType("text/html");
 	PrintWriter out=res.getWriter();
 	String referencenumber=req.getParameter("apply");
-	HttpSession hs=req.getSession();
+	HttpSession hs=req.getSession();	
 	String username=(String)hs.getAttribute("username");
    	try
 	{
